@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04060F">
+  <title>Cine Horizonte | Boletos y combos en línea</title>
+  <meta name="description" content="Compra boletos, elige tus asientos y pide tus combos en Cine Horizonte.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1 class="hero__title" data-intro style="--i:0">El cine del futuro, hoy</h1>
+          <p class="hero__text" data-intro style="--i:1">Elige tu película, tu función y tus asientos en un mapa interactivo. Paga en línea y entra con tu boleto digital.</p>
+          <div class="hero__actions" data-intro style="--i:2">
+            <a class="btn btn--primary" href="cartelera.html">Ver cartelera</a>
+            <a class="btn btn--ghost" href="combos.html">Pedir combos</a>
+          </div>
+          <div class="hero__stats" data-intro style="--i:3">
+            <div><strong>9</strong><span>películas en cartelera</span></div>
+            <div><strong>6</strong><span>salas con 2D, 3D y Premium</span></div>
+            <div><strong>QR</strong><span>boleto digital al instante</span></div>
+          </div>
+        </div>
+        <div class="ring-wrap" aria-label="Carrusel 3D de películas">
+          <ul class="ring" id="ring"></ul>
+          <div class="ring-floor" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">Destacadas de la semana</h2>
+          <a class="link-arrow" href="cartelera.html">Ver las 9 películas &rarr;</a>
+        </div>
+        <div class="grid" id="home-movies" data-reveal></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal><h2 class="section-title">Compra en 4 pasos</h2></div>
+        <ol class="steps" data-reveal>
+          <li><h3>Elige tu película</h3><p>Consulta la sinopsis, duración y clasificación.</p></li>
+          <li><h3>Escoge función</h3><p>Día, horario, formato y sala.</p></li>
+          <li><h3>Selecciona asientos</h3><p>Mapa en vivo con lugares libres y ocupados.</p></li>
+          <li><h3>Paga y entra</h3><p>Recibe tu boleto con código QR y tu ticket.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 class="section-title">Combos para la función</h2>
+          <a class="link-arrow" href="combos.html">Ver todos &rarr;</a>
+        </div>
+        <div class="grid" id="home-combos" data-reveal></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

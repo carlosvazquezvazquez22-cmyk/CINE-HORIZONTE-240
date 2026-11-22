@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04060F">
+  <title>Carrito | Cine Horizonte</title>
+  <meta name="description" content="Revisa tus boletos y combos y completa tu pago.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="carrito">
+
+  <main id="contenido">
+    <section class="page-head">
+      <div class="container">
+        <h1 data-intro>Tu carrito</h1>
+        <p data-intro style="--i:1">Revisa tu compra, llena tus datos y paga con tarjeta (simulación).</p>
+      </div>
+    </section>
+
+    <div class="container" id="cart-empty" hidden>
+      <div class="empty">
+        <h2>Tu carrito está vacío</h2>
+        <p>Agrega boletos desde la cartelera o combos de comida.</p>
+        <div class="seat-actions"><a class="btn btn--primary" href="cartelera.html">Ver cartelera</a><a class="btn btn--ghost" href="combos.html">Ver combos</a></div>
+      </div>
+    </div>
+
+    <div class="container cart-layout" id="cart-layout">
+      <div>
+        <section class="panel" aria-labelledby="h-boletos"><h2 id="h-boletos">Boletos</h2><div id="tickets-list"></div></section>
+        <section class="panel" aria-labelledby="h-food"><h2 id="h-food">Alimentos y bebidas</h2><div id="food-list"></div></section>
+
+        <form class="panel" id="checkout-form" novalidate autocomplete="off">
+          <h2>Tus datos</h2>
+          <div class="field"><label for="f-name">Nombre completo</label><input id="f-name" type="text" autocomplete="name" placeholder="Nombre y apellido"><p class="field-error" id="e-name"></p></div>
+          <div class="field-row">
+            <div class="field"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" autocomplete="email" placeholder="nombre@correo.com"><p class="field-error" id="e-email"></p></div>
+            <div class="field"><label for="f-phone">Teléfono (10 dígitos)</label><input id="f-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="55 1234 5678"><p class="field-error" id="e-phone"></p></div>
+          </div>
+
+          <h2 style="margin-top:1.6rem">Pago con tarjeta</h2>
+          <p class="pay-note">Es una simulación: no se hace ningún cobro. No escribas datos de una tarjeta real. Usa la tarjeta de prueba <strong>4242 4242 4242 4242</strong>, cualquier fecha futura y 3 dígitos. (Con 4000 0000 0000 0002 verás un pago rechazado.)</p>
+          <div class="field"><label for="f-card">Número de tarjeta</label><input id="f-card" type="text" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242"><p class="field-error" id="e-card"></p></div>
+          <div class="field"><label for="f-holder">Nombre en la tarjeta</label><input id="f-holder" type="text" autocomplete="off" placeholder="Como aparece en la tarjeta"><p class="field-error" id="e-holder"></p></div>
+          <div class="field-row">
+            <div class="field"><label for="f-exp">Vencimiento (MM/AA)</label><input id="f-exp" type="text" inputmode="numeric" autocomplete="off" placeholder="08/29"><p class="field-error" id="e-exp"></p></div>
+            <div class="field"><label for="f-cvv">Código (CVV)</label><input id="f-cvv" type="password" inputmode="numeric" autocomplete="off" placeholder="123"><p class="field-error" id="e-cvv"></p></div>
+          </div>
+          <div class="terms">
+            <label for="f-privacy"><input id="f-privacy" type="checkbox"><span>He leído y acepto la <button type="button" data-act="privacy">política de privacidad</button>.</span></label>
+            <p class="field-error" id="e-privacy"></p>
+          </div>
+        </form>
+      </div>
+
+      <aside class="panel summary" aria-labelledby="h-sum">
+        <h2 id="h-sum">Resumen</h2>
+        <div class="sum-row"><span id="sum-tickets-label">Boletos</span><span id="sum-tickets">$0</span></div>
+        <div class="sum-row"><span id="sum-food-label">Alimentos</span><span id="sum-food">$0</span></div>
+        <div class="sum-row sum-row--total"><span>Total</span><span id="sum-total">$0</span></div>
+        <button class="btn btn--primary btn--block" type="submit" form="checkout-form" id="pay-btn">Pagar</button>
+        <a class="btn btn--ghost btn--block" href="cartelera.html">Agregar más boletos</a>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

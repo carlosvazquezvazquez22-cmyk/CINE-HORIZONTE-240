@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04060F">
+  <title>Cartelera | Cine Horizonte</title>
+  <meta name="description" content="Las 9 películas en cartelera de Cine Horizonte.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="cartelera">
+
+  <main id="contenido">
+    <section class="page-head">
+      <div class="container">
+        <h1 data-intro>Cartelera</h1>
+        <p data-intro style="--i:1">Toca una película para ver su información, elegir horario y reservar tus asientos.</p>
+      </div>
+    </section>
+    <section class="container">
+      <div class="toolbar">
+        <div class="search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="q">Buscar película</label>
+          <input id="q" type="search" placeholder="Buscar por título o género" autocomplete="off">
+        </div>
+        <div>
+          <label class="sr-only" for="genre">Género</label>
+          <select class="input" id="genre"></select>
+        </div>
+      </div>
+      <p id="count" class="sr-only" aria-live="polite"></p>
+      <div class="grid" id="movie-grid"></div>
+      <div class="empty" id="no-results" hidden>
+        <p>No encontramos películas con esa búsqueda.</p>
+        <button class="btn btn--ghost btn--sm" type="button" id="reset-filters">Quitar filtros</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

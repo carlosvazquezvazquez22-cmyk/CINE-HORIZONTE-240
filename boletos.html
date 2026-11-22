@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#04060F">
+  <title>Mis boletos | Cine Horizonte</title>
+  <meta name="description" content="Tus boletos digitales con código QR y tu ticket de compra.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="boletos">
+
+  <main id="contenido">
+    <section class="page-head">
+      <div class="container">
+        <h1 id="page-title" data-intro>Mis boletos</h1>
+        <p data-intro style="--i:1">Aquí están tus boletos digitales y tu ticket de compra. Puedes imprimirlos o guardarlos en PDF.</p>
+      </div>
+    </section>
+    <section class="container" style="padding-bottom:3rem">
+      <div id="tickets-root"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
